@@ -77,6 +77,8 @@ footer {
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
+
+
     .hero h1 {
         font-size: 2rem;
     }
@@ -84,4 +86,82 @@ footer {
     .hero p {
         font-size: 1rem;
     }
+
+    /* Reduce padding on sections for small screens */
+    section {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Make pricing items stand out as "cards" */
+    #pricing li {
+        background: #6e1717;
+        margin: 0.5rem 0;
+        padding: 0.75rem;
+        border-radius: 6px;
+    }
+
+    /* Tablet view (between 600px and 900px) */
+    @media (max-width: 900px) and (min-width: 601px) {
+
+        /* Slightly smaller hero text */
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        /* Reduce section padding a bit */
+        section {
+            padding: 2rem 1.5rem;
+        }
+
+        /* Pricing items side-by-side in two columns */
+        #pricing ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* 2 columns */
+            gap: 1rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #pricing li {
+            background: #f9f9f9;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+
+    /* Mobile view (600px and below) */
+    @media (max-width: 600px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 1.5rem 1rem;
+        }
+
+        #pricing li {
+            background: #ffffff;
+            margin: 0.75rem 0;
+            padding: 1rem;
+            border: 2px solid #0077cc;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
+
+
 }
